@@ -1,0 +1,16 @@
+version: '3.3'
+networks:
+  wikinet:
+    ipam:
+      config:
+        - subnet: 172.10.0.0/16
+services:
+  wiki:
+    build: container-wiki
+    container_name: mk-wiki
+    volumes:
+      - './wiki:/root/docs'
+    ports:
+      - '8000:8000'
+    networks:
+      - wikinet
