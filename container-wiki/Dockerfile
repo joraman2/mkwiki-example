@@ -1,4 +1,4 @@
-FROM rockylinux:8
+FROM rockylinux:9
 
 RUN dnf install python3 python3-pip -y
 RUN pip install mkdocs
