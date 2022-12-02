@@ -1,7 +1,7 @@
 FROM rockylinux:8
 
-RUN dnf install python2 -y
-RUN pip2 install mkdocs
+RUN dnf install python3 python3-pip -y
+RUN pip install mkdocs
 
 WORKDIR /root/docs
 
